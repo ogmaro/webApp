@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "The Squarer";
+}
+
+<div class="text-center">
+    <h1 class = "display-3">Welcome User</h1>
+    <h3 class = "display-6">This Program outputs the greater of two squares from numbers given by You</h3>
+
+    <div>
+        @{
+            @if(ViewBag.Result != null){
+                <h5 class="display-8 text-danger"> <em>@ViewBag.Result</em> </h5>
+            }
+        }
+        <form asp-asp-controller="Home" asp-action="Squarer" method="POST">
+            <input type="text" placeholder="First Number" name="firstNumber"/>
+            <br /><br />
+            <input type="text" placeholder="Second Number" name="secondNumber"/>
+            <br/>
+            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
